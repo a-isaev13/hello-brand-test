@@ -1,0 +1,317 @@
+@import "reset";
+@import "fonts";
+@import "variables";
+@import "global";
+
+.header {
+  margin-bottom: 80px;
+  padding-top: 55px;
+  padding-bottom: 265px;
+  background-image: url("@img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  &__nav-btn {
+    display: none;
+  }
+  &__top {
+    margin-bottom: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__list-item {
+    margin-right: 45px;
+  }
+  &__list-item:last-child {
+    margin-right: 0;
+  }
+  &__list-link {
+    line-height: 24px;
+    border-bottom: 1px solid transparent;
+    transition: all .5s ease;
+  }
+  &__list-link:hover {
+    border-bottom: 1px solid $color-thirty;
+  }
+  &__list-link:focus {
+    color: $color-thirty;
+  }
+  &__phone {
+    padding-left: 33px;
+    background-image: url("@img/phone-icon.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    transition: all .5s ease;
+  }
+  &__phone:hover {
+    color: $color-thirty;
+  }
+  &__info-text {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  &__info-title {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 88px;
+  }
+  &__info-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info-btn {
+    text-align: center;
+    width: 270px;
+    height: 100px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: $color-btn;
+    transition: all .5s ease-in-out;
+  }
+  &__info-btn:hover {
+    background-color: $color-thirty;
+  }
+  &__info-social {
+    display: flex;
+    align-items: center;
+  }
+  &__info-social-item {
+    margin-right: 25px;
+  }
+  &__info-social-item:last-child {
+    margin-right: 0;
+  }
+  &__info-social-link svg {
+    border: 2px solid $color-first;
+    border-radius: 50%;
+    transition: all .5s ease-in-out;
+  }
+  &__info-social-link svg:hover {
+    color: $color-thirty;
+    border-color: $color-thirty;
+  }
+}
+.menu {
+  margin-bottom: 90px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__list {
+    color: $color-secondary;
+  }
+  &__list-title {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  &__list-item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $secondary-gray;
+  }
+  &__list-item:last-child {
+    margin-bottom: 0;
+  }
+  &__list-text {
+    margin-right: 12px;
+    font-size: 18px;
+  }
+  &__list-text:last-child {
+    margin-right: 0;
+  }
+  &__list-dot {
+    margin-right: 12px;
+    width: 5px;
+    height: 5px;
+    background-color: $color-thirty;
+    border-radius: 50%;
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 471px;
+      height: 502px;
+      border: 2px solid $color-thirty;
+      top: 50px;
+      right: 100px;
+      z-index: -1;
+    }
+  }
+  &__content-img--1 {
+    margin-right: 22px;
+    padding-top: 120px;
+  }
+}
+.reviews {
+  margin-bottom: 109px;
+  background-color: $color-btn;
+  &__slider-content {
+    padding: 220px 0;
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__slider-quite {
+    margin-bottom: 50px;
+    font-family: serif;
+    font-weight: 700;
+    font-size: 83px;
+    color: $color-thirty;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    color: $color-thirty;
+  }
+  &__text {
+    min-height: 111px;
+    margin-bottom: 40px;
+    line-height: 40px;
+  }
+  &__author {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 40px;
+    color: $color-thirty;
+  }
+  &__swiper-container .swiper-button-prev::after,
+  &__swiper-container .swiper-button-next::after {
+    color: $color-first;
+    transition: all 0.5s ease-in-out;
+  }
+  &__swiper-container .swiper-button-prev:hover::after,
+  &__swiper-container .swiper-button-next:hover::after {
+    color: $color-thirty;
+  }
+  .swiper-pagination {
+    display: none;
+  }
+}
+.preview {
+  margin-bottom: 80px;
+  &__items {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__items:last-child {
+    margin-bottom: 0;
+  }
+  &__items-info {
+    max-width: 470px;
+  }
+  &__items-title {
+    margin-bottom: 20px;
+    position: relative;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 88px;
+    color: $color-secondary;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 108px;
+      height: 2px;
+      left: -55px;
+      bottom: 0;
+      background-color: $color-thirty;
+    }
+  }
+  &__items-text {
+    min-height: 96px;
+    color: $primary-gray;
+  }
+  &__items-pic {
+    max-width: 570px;
+    width: 100%;
+  }
+}
+.popup {
+  position: fixed;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 5;
+  display: none;
+  &__wrapper {
+    width: 500px;
+    max-width: 100%;
+    padding: 60px 20px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $primary-gray;
+    border-radius: 10px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 32px;
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__form-input {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 10px 15px;
+    width: 300px;
+    border: 1px solid $thirty-gray;
+  }
+  &__form-btn {
+    padding: 10px 80px;
+    background-color: $color-btn;
+    transition: all .5s ease-in-out;
+  }
+  &__form-btn:hover {
+    background-color: $color-thirty;
+  }
+}
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+}
+.close-btn-line {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $color-secondary;
+}
+.close-btn-line:nth-child(1) {
+  transform: rotate(45deg);
+}
+.close-btn-line:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.popup.active {
+  display: flex;
+}
+
+@import "media";
